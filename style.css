@@ -18,14 +18,14 @@
 } ::-webkit-scrollbar-track {
     background: var(--black,#212121);
 } ::-webkit-scrollbar-thumb {
-    background: var(--white, #393e46);
+    background: var(--white, #e8e8e8);
     border-radius: 7px;
 } 
 body{
     max-width: 1500px;
     margin: auto;
-    color: var(--white);
-    background-color: var(--surface);
+    color: var(--white, #e8e8e8);
+    background-color: var(--surface, );
 }
 
 /* COMPONENTS   */
@@ -62,7 +62,7 @@ header{
     position: relative;
     justify-content: space-between;
     align-items: center;
-    border-bottom: 1px solid #f2f2f2;
+    border-bottom: 1px solid var(--white, #e8e8e8);
 }
 header h1{
     font-size: 2.4em;
@@ -89,8 +89,8 @@ header button:hover ~ #about {
     overflow: hidden;
     max-width: 600px;
     padding: 0 1em;
-    background-color: var(--white);
-    border: 0 solid var(--black);
+    background-color: var(--white, #e8e8e8);
+    border: 0 solid var(--black #212121);
     top: 110%;
     color: var(--black);
     right: 3%;
@@ -115,6 +115,7 @@ header button:hover ~ #about {
     z-index: 999;
     padding: 1em;
     display: block;
+    background-color: #212121;
     background-color: rgba(var(--black-rgb), .75);
 }
 
@@ -122,11 +123,11 @@ header button:hover ~ #about {
     margin: auto;
     padding: 1em;
     border-radius: 1em;
-    border: 2px solid var(--black);
+    border: 2px solid var(--black, #212121);
     width: 100%;
     max-width: 600px;
     color: var(--black);
-    background-color: var(--white);
+    background-color: var(--white, #e8e8e8);
 }
 
 #welcome h1 {
@@ -136,7 +137,7 @@ header button:hover ~ #about {
     font-size: 3em;
 }
 #welcome h1 i {
-    color: var(--accent);
+    color: var(--accent, yellowgreen);
 }
 #welcome p {
     font-size: 1.2em;
@@ -147,7 +148,7 @@ header button:hover ~ #about {
 }
 #welcome button {
     margin-top: 2em;
-    background-color: var(--accent);
+    background-color: var(--accent, yellowgreen);
     padding: .7em 1em;
     float: right;
     font-size: 1.2em;
@@ -168,9 +169,9 @@ header button:hover ~ #about {
     margin: 2em auto;
     padding: 1em;
     border-radius: 1em;
-    border: 2px solid var(--black);
-    color: var(--black);
-    background-color: var(--white);
+    border: 2px solid var(--black, #212121);
+    color: var(--black, #212121);
+    background-color: var(--white, #e8e8e8);
     animation: result-in .4s forwards ease-out;
 }
 
@@ -243,6 +244,7 @@ aside > .btn {
     width: 100%;
     padding: .15em 0;
     border-radius: .75em .75em 0 0;
+    background-color: #212121;
     background-color: rgba(var(--black-rgb), .75);
 }
 
@@ -281,15 +283,16 @@ footer > div  {
     font-size: 5em;
     padding: .4em;
     color: var(--black);
-    background-color: var(--accent);
-    border: 1px solid var(--white);
+    background-color: var(--accent, yellowgreen);
+    border: 1px solid var(--white, #e8e8e8);
 }
 #control:active {
-    color: var(--surface);
-    border-color: var(--surface);
+    color: var(--surface, #3A3845);
+    border-color: var(--surface, #3A3845);
 }
 #control.punch{
     color: var(--white);
+    background-color: #212121;
     background-color: rgba(var(--black-rgb), .75);
 }
 
@@ -303,7 +306,7 @@ footer  ul {
     list-style: none;
 }
 footer ul a{
-    color: var(--white);
+    color: var(--white, #e8e8e8);
     text-decoration: none;
     font-size: 1.6em;
 }
