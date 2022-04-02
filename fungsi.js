@@ -1,23 +1,23 @@
 // variable 
   // status 
-const timer = document.getElementById('time');
-const score = document.getElementById('score')
-const hit = document.getElementById('hit');
-
-  // Result 
-const r_score = document.getElementById("r-score")
-const r_hit = document.getElementById("r-hit")
-
-  // stopwatch  
-const ten = document.getElementById('tens');
-const sec = document.getElementById('second');
-
-  // sound effect 
-const sfx_salam = document.getElementById("salam")
-const sfx_punch1 = document.getElementById('punch-1');
-const sfx_punch2 = document.getElementById('punch-2');
-const sfx_finish = document.getElementById('finish');
-
+  const timer = document.getElementById('time');
+  const score = document.getElementById('score')
+  const hit = document.getElementById('hit');
+  
+    // Result 
+  const r_score = document.getElementById("r-score")
+  const r_hit = document.getElementById("r-hit")
+  
+    // stopwatch  
+  const ten = document.getElementById('tens');
+  const sec = document.getElementById('second');
+  
+    // sound effect 
+  const sfx_salam = document.getElementById("salam")
+  const sfx_punch1 = document.getElementById('punch-1');
+  const sfx_punch2 = document.getElementById('punch-2');
+  const sfx_finish = document.getElementById('finish');
+  
   // main image 
 const img = document.getElementById('main-img')
 
@@ -53,7 +53,9 @@ function cls_welcome() {
 }
 
 // PLAY ==================== 
-function mainkan ( el) {
+function mainkan ( el, e) {
+
+  console.log(e)
 
   reset()
 
@@ -71,13 +73,14 @@ function mainkan ( el) {
     el.setAttribute("onClick", "javascript: punch_it(this, event)")
     
 
-  }, 1300);
+  }, 2000);
 }
 
 // BAK BUK BAK BUK =============
-function punch_it( el ) {
+function punch_it( el, e ) {
+  console.log(e)
 
-  if ( punch >= 100 ) {
+  if ( punch >= 5 ) {
     finish()
 
     el.textContent = "play_arrow"
@@ -133,13 +136,12 @@ function finish() {
     span.textContent = pesan_kalah[Math.floor(Math.random() * (3 - 0 + 1))]
   }
 
-  r_score.textContent = timer.textContent.replace(/\s/g, '') ;
+  r_score.textContent = timer.textContent ;
   r_hit.textContent = punch
 
   result.style.display = "block"
-
-  result.addEventListener( "click", () => {
-    setTimeout(() => {
+  let child = result.firstElementChild
+  child.addEventListener( "click", () => {
       result.firstElementChild.style.animationName = "result-out"
 
       setTimeout(() => {
@@ -147,7 +149,6 @@ function finish() {
         result.firstElementChild.style.animationName = "result-in"
       }, 450);
           
-    }, 2000);
   })
 }
 
@@ -186,6 +187,6 @@ seconds++;
 //copy result
 function catat() {
   navigator.clipboard.writeText(
-    `saya berhasil mencapai 100 hit dalam ${timer.textContent} detik! di mini game Binjai 100\nhttps://diaz-adrianz.github.io/Binjai-100/`
+    `saya berhasil mencapai 100 hit dalam ${score.textContent} detik! di mini game Binjai 100\nhttps://diaz-adrianz.github.io/Binjai-100/`
   )
 }
