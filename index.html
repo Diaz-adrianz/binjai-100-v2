@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="id" >
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <meta name="keywords" content="binjai, binjai 100, mini game github, diaz adriansyah," >
+    <meta name="description" content="Mini game sederhana 'Binjai 100', permainan untuk mencapai 100 hit secepatnya dalam merobohkan pohon pisang">
+
+    <!-- main stylesheet  -->
+    <link rel="stylesheet" href="style.css">
+    
+    <!-- font google  -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    
+    <!-- on tab  -->
+    <link rel="shortcut icon" href="assets/favicon.png" type="image/x-icon">
+    <title>Binjai 100</title>
+</head>
+<body>
+    <div class="container">
+
+        <!-- MODAL SELAMAAT DATANG  -->
+        <div id="welcome" class="fade">
+            <div>
+                <h1>Hello <i class="material-icons">waving_hand</i></h1>
+
+                <p>
+                    Selamat datang di game sederhana. Raih skor waktu tercepat untuk meraih 100 hit
+                    Pukul dengan menggunakan tombol <strong>Enter</strong> atau <strong>Tombol pojok kanan bawah</strong>
+                    Selamat mencoba :)
+                </p>
+
+                <button class="btn" onclick="cls_welcome()">Dimengerti</button>
+            </div>
+        </div>
+
+        <!-- MODAL RESULT  -->
+        <div id="result" class="fade">
+            <div>
+                <h1>
+                    <i class="material-icons">sentiment_very_satisfied</i>
+                    <span>New Record</span>
+                </h1>
+                <div>
+                    <div class="stats">
+                        <p id="r-score">00.00</p>
+                        <span for="r-score">TIme</span>
+                    </div>
+
+                    <div class="stats">
+                        <p id="r-hit">0</p>
+                        <span for="r-hit">hit</span>
+                    </div>
+                </div>
+                <span>klik sembarang dan tunggu 3 detik</span>
+            </div>
+        </div>
+
+        <!-- HEADER -->
+        <header>
+            <h1>Binjai 100</h1>
+            <div>
+                <p>version 2.0 | 2/04/2022</p>
+                <button class="btn material-icons">info</button>
+
+                <div id="about">
+                    <h1>Ingfo</h1>
+                    <p>
+                        Mini game sederhana 'Binjai 100' merupakan permainan untuk mencapai 100 hit secepatnya dalam merobohkan pohon pisang.
+                        Game ini merupakan versi kedua yang sebelumnya pada tanggal 16-11-2021. <br> <br>
+                        Terimakasih udah mampir, hehe :v<br>
+                        Sekedar Mini Project & kegabutan :)
+                    </p>
+                </div>
+            </div>
+        </header>
+
+        <!-- MAIN CONTAINER -->
+        <main>
+
+            <!-- STATS GAME  -->
+            <aside id="stats">
+
+                <button class="btn material-icons" onclick="catat()">content_copy</button>
+                <div class="stats">
+                    <p id="hit">0</p>
+                    <span for="hit">hit</span>
+                </div>
+
+                <div class="stats">
+                    <p id="time">
+                        <span class="time" id="tens">00</span>.
+                        <span class="time" id="second">00</span>
+                    </p>
+                    <span for="time">Time</span>
+                </div>
+
+                <div class="stats">
+                    <p id="score">00.00</p>
+                    <span for="score">High score</span>
+                </div>
+
+            </aside>
+
+            <!-- MAIN IMAGE GAME  -->
+            <figure class="">
+                <img id="main-img" src="assets/1.png" alt="" >
+            </figure>
+            
+        </main>
+
+        <!-- FOOTER & CONTROL  -->
+        <footer>
+            <div>
+                <p>by Diaz Adriansyah</p>
+                <ul>
+                    <li><a target="_blank" href="https://www.facebook.com/diaz.adrian.560/" class="fab fa-facebook"></a></li>
+                    <li><a target="_blank" href="https://www.instagram.com/diaz_adrianz19/" class="fab fa-instagram"></a></li>
+                    <li><a target="_blank" href="https://github.com/Diaz-adrianz" class="fab fa-github"></a></li>
+                </ul>
+                <button class="btn material-icons" id="control" onclick="mainkan(this)">
+                    play_arrow
+                </button>
+            </div>
+        </footer>
+
+        <!-- SFX  -->
+        <audio id="punch-1" src="assets/sfx-punch-1.mpeg"></audio>
+        <audio id="punch-2" src="assets/sfx-punch-2.mpeg"></audio>
+        <audio id="finish" src="assets/sfx-finish.mp3"></audio>
+        <audio id="salam" src="assets/sfx-salam.mpeg"></audio>
+    </div>
+    
+    <script src="fungsi.js"></script>
+    <script src="https://kit.fontawesome.com/bc418b707a.js" crossorigin="anonymous"></script>
+
+</body>
+</html>
