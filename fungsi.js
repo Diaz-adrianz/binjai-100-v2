@@ -77,7 +77,7 @@ function mainkan ( el) {
 // BAK BUK BAK BUK =============
 function punch_it( el ) {
 
-  if ( punch >= 5 ) {
+  if ( punch >= 100 ) {
     finish()
 
     el.textContent = "play_arrow"
@@ -147,7 +147,7 @@ function finish() {
         result.firstElementChild.style.animationName = "result-in"
       }, 450);
           
-    }, 3000);
+    }, 2000);
   })
 }
 
@@ -186,8 +186,6 @@ seconds++;
 //copy result
 function catat() {
   navigator.clipboard.writeText(
-    `saya berhasil mencapai 100 hit dalam ${timer.textContent} detik!
-    di mini game Binjai 100\n
-    https://diaz-adrianz.github.io/Binjai-100/`
+    `saya berhasil mencapai 100 hit dalam ${timer.textContent} detik! di mini game Binjai 100\nhttps://diaz-adrianz.github.io/Binjai-100/`
   )
 }
