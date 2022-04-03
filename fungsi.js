@@ -80,7 +80,7 @@ function mainkan ( el, e) {
 function punch_it( el, e ) {
   console.log(e)
 
-  if ( punch >= 5 ) {
+  if ( punch >= 100 ) {
     finish()
 
     el.textContent = "play_arrow"
