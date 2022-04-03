@@ -211,12 +211,12 @@ main{
 }
 /* aside | stats */
 main > aside {
-    padding: 2em 0;
+    padding: 2em 1em;
     flex: 1;
     display: flex;
     gap: 3em;
     flex-direction: column;
-    justify-content: space-around;
+    justify-content: space-between;
     position: relative;
 }
 
